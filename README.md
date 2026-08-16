@@ -9,8 +9,7 @@ A simple and beautiful web-based metronome app.
 * **Clean Interface**: Easy to use for everyone. (誰でも使いやすいシンプルな画面です)
 
 ## 🌐 Live Demo (公開サイト)
-Check out the app here:
-👉 [https://jinn-saku-coco5.github.io/my-app/]
+Check out the app here:👉 [https://jinn-saku-coco5.github.io/my-app/]
 
 ## 🛠️ Built With (使っている技術)
 * HTML5

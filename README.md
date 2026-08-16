@@ -1,7 +1,7 @@
 # JINN Rhythm Box v5.6
 
 A simple and beautiful web-based metronome app.
- *（シンプルで美しいウェブベースのメトロノームアプリです。）
+* (シンプルで美しいウェブベースのメトロノームアプリです。)
 
 ## 🚀 Features (特徴)
 * **Precise Rhythm**: Accurately counts the beat. (正確なリズムを刻みます)

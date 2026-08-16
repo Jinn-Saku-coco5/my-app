@@ -31,7 +31,7 @@
         }
         .container {
             background: #1e1e1e;
-            padding: 18px;
+            padding: 10px 18px 18px 18px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             text-align: center;
@@ -45,7 +45,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
             position: relative;
         }
         .title-box {
@@ -145,7 +145,7 @@
         .close-modal-btn:hover { background: #d32f2f; }
 
         .indicator-area {
-            height: 45px;
+            height: 53px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -196,7 +196,7 @@
         .grid-indicators {
             display: none;
             flex-direction: column;
-            gap: 3px;
+            gap: 1px;
             justify-content: center;
             align-items: center;
             width: 100%;
@@ -210,7 +210,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 3px;
         }
         .step-lamp {
             width: 9px;
@@ -218,6 +218,7 @@
             border-radius: 2px;
             background: #333;
             transition: background 0.05s ease;
+            cursor: default;
         }
         
         .step-lamp.active-h { background: #ff9800; box-shadow: 0 0 8px #ff9800; } 
@@ -237,8 +238,13 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+           
             padding: 0;
             font-weight: bold;
+        }
+
+        .note-toggle-btn:disabled {
+        cursor: default;
         }
         .note-toggle-btn.state-h { background: #ff9800; color: #000; border-color: #ff9800; }
         .note-toggle-btn.state-m1 { background: #00bcd4; color: #000; border-color: #00bcd4; }
@@ -266,6 +272,7 @@
             font-family: inherit;
             outline: none;
             transition: all 0.2s;
+            padding: 0;
         }
         .bpm-input:hover { border-color: #444; background: #252525; }
         .bpm-input:focus { border-color: #4CAF50; background: #252525; }
@@ -283,9 +290,9 @@
             color: #fff;
             border: none;
             border-radius: 4px;
-            width: 28px;
-            height: 28px;
-            font-size: 0.9rem;
+            width: 24px;
+            height: 24px;
+            font-size: 0.8rem;
             cursor: pointer;
             font-weight: bold;
             user-select: none;
@@ -383,6 +390,10 @@
             cursor: pointer;
             font-weight: bold;
         }
+            .subdivision-btn:disabled {
+                cursor: default;
+            }
+
         .subdivision-btn.active {
             background: #ff9800;
             color: #000;
@@ -463,8 +474,8 @@
 <div class="container">
     <div class="header-area">
         <div class="title-box">
-            <span style="font-size: 20px; font-weight: bold;">JINN's Metronome</span><br>
-            <span style="font-size: 10px; color: #888;">Rhythm Box</span>
+            <div style="font-size: 18px; font-weight: bold; line-height: 1;">JINN's Metronome</div>
+            <div style="font-size: 9px; color: #888; margin-top:0 margin bottom 2px;">Rhythm Box</div>
         </div>
         <button class="help-btn" id="helpOpenBtn">?</button>
     </div>
@@ -890,6 +901,12 @@
                 box.style.display = 'none';
             }
         });
+
+        subdivBtn.disabled = (currentMode === 'normal');
+
+        if (currentMode === 'normal') {
+            isSixteenth = false;
+        }   
 
         if (isSixteenth) {
             row2.style.display = 'flex';

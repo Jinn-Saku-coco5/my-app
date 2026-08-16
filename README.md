@@ -10,8 +10,7 @@ A simple and beautiful web-based metronome app.
 
 ## 🌐 Live Demo (公開サイト)
 Check out the app here:
-👉 [https://github.io](https://github.io)
-[https://jinn-saku-coco5.github.io/my-app/]
+👉 [https://jinn-saku-coco5.github.io/my-app/]
 
 ## 🛠️ Built With (使っている技術)
 * HTML5
